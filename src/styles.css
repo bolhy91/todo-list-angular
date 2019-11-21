@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  line-height: 1.4em;
+  background: #ddd;
+  color: #4d4d4d;
+  margin: 0 auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 300;
+}
