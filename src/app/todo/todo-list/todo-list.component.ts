@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Todo} from '../todo';
+import {TodoListStorageService} from '../todo-list-storage.service';
 
 @Component({
   selector: 'app-todo-list',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoListComponent implements OnInit {
 
-  constructor() { }
+  todos: Todo[];
+  constructor(private storageTodo: TodoListStorageService) { }
 
   ngOnInit() {
+    this.todos = this.storageTodo.getTodo();
   }
-
+  // Metodo para agregar una nueva tarea a la lista
+  addTodo(item) {
+    return this.storageTodo.postTodo(item);
+  }
 }
