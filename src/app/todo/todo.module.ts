@@ -6,19 +6,22 @@ import {HttpClientModule} from '@angular/common/http';
 import { TodoRouting } from './todo.routing';
 // Declaracion de componentes para las tareas
 import { TodoListComponent } from './todo-list/todo-list.component';
-import { TodoDetailComponent } from './todo-detail/todo-detail.component';
 // Servicios de tareas
 import {TodoListStorageService} from './todo-list-storage.service';
 import { TodoInputComponent } from './todo-input/todo-input.component';
+import {FormsModule} from '@angular/forms';
+import { TodoUpdateComponent } from './todo-update/todo-update.component';
+import { TodoItemComponent } from './todo-item/todo-item.component';
 
 
 @NgModule({
-  declarations: [TodoListComponent, TodoDetailComponent, TodoInputComponent],
+  declarations: [TodoListComponent, TodoInputComponent, TodoUpdateComponent, TodoItemComponent],
   imports: [
     CommonModule,
     TodoRouting,
     // Llamado del modulo para peticiones Http
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   // Colocamos TodoListStorageService solo para que se carga cuando el modulo TodoModule inicializa, tambien podemos ponerlo como root
   providers: [TodoListStorageService]

@@ -1,20 +1,36 @@
 <!--Campo para la agregar nuevas tareas-->
 <div class="card-panel hoverable">
+<!-- Uso de mi input, que nos enviara a traves de evento el texto introducido por el usuario -->
     <app-todo-input (submit)="addTodo($event)"></app-todo-input>
 </div>
 
 <!--Lista de tareas pendientes-->
 <ul class="collection with-header">
+<!-- Recorro la lista de tareas -->
   <li class="collection-item" *ngFor="let todo of todos">
-    <div>
-      <label>
-        <input type="checkbox" (click)="completeTodo(todo)" [checked]="todo.complete"/>
-        <span [ngClass]="{'todo-complete': todo.complete }">{{ todo.title }}</span>
-      </label>
-      <a href="#!" class="secondary-content">
-        <i class="material-icons">close</i>
-      </a>
-    </div>
+<!--    <div>-->
+<!--      <label>-->
+<!--&lt;!&ndash;   Verificar si la lista se encuentra completada, para asignarle la clase css de rayado &ndash;&gt;-->
+<!--        <input type="checkbox" (click)="completeTodo(todo)" [checked]="todo.complete"/>-->
+<!--        <span [ngClass]="{'todo-complete': todo.complete }">{{ todo.title }}</span>-->
+<!--      </label>-->
+<!--&lt;!&ndash;  Remover una tarea de la lista actual &ndash;&gt;-->
+<!--      <a href="javascript:void(0)" class="secondary-content" (click)="removeTodo(todo)">-->
+<!--        <i class="material-icons text-accent-1">close</i>-->
+<!--      </a>-->
+<!--      <a href="#modal1" class="secondary-content modal-trigger" (click)="modalUpdate(todo)">-->
+<!--        <i class="material-icons">edit</i>-->
+<!--      </a>-->
+<!--    </div>-->
+    <app-todo-item
+      [item]="todo"
+      (removeItem)="removeTodo($event)"
+      (completeItem)="completeTodo($event)"
+      (modalItem)="modalUpdate($event)">
+    </app-todo-item>
   </li>
 </ul>
+
+<!-- Modal para editar la informacion del item seleccionado-->
+<app-todo-update [itemTodo]="todo" (updateTodo)="updateTodo($event)"></app-todo-update>
 
