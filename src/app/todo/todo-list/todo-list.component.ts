@@ -17,6 +17,9 @@ export class TodoListComponent implements OnInit {
   }
   // Metodo para agregar una nueva tarea a la lista
   addTodo(item) {
-    return this.storageTodo.postTodo(item);
+    this.todos =  this.storageTodo.postTodo(item);
+  }
+  completeTodo(item: Todo) {
+    this.storageTodo.completeTodo(item);
   }
 }
