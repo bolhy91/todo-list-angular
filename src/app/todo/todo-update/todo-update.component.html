@@ -1,0 +1,14 @@
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <h4>Editar: {{ itemTodo?.title }}</h4>
+    <div class="row">
+      <div class="input-field col s12">
+        <input [(ngModel)]="itemTodo.title" id="upTodo" type="text">
+        <label for="upTodo" class="active">Introduce un nuevo valor para tu tarea</label>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a href="javascript:void(0)" class="modal-close waves-effect waves-green btn-flat" (click)="changeTodo()">Actualizar</a>
+  </div>
+</div>

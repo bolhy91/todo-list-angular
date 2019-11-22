@@ -1,0 +1,9 @@
+<div class="input-field">
+  <input
+    id="newTodo"
+    type="text"
+    [(ngModel)]="newTodo.title"
+    (keyup.enter)="eventTitle()"
+    #inputElement>
+  <label for="newTodo" class="size-22">Que hay que hacer ?</label>
+</div>

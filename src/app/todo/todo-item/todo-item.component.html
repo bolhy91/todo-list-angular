@@ -1,0 +1,14 @@
+<div>
+  <label>
+    <!--   Verificar si la lista se encuentra completada, para asignarle la clase css de rayado -->
+    <input type="checkbox" (click)="completeTodo()" [checked]="item.complete"/>
+    <span [ngClass]="{'todo-complete': item.complete }">{{ item.title }}</span>
+  </label>
+  <!--  Remover una tarea de la lista actual -->
+  <a href="javascript:void(0)" class="secondary-content" (click)="removeTodo()">
+    <i class="material-icons text-accent-1">close</i>
+  </a>
+  <a href="#modal1" *ngIf="!item.complete" class="secondary-content modal-trigger" (click)="modalTodo()">
+    <i class="material-icons">edit</i>
+  </a>
+</div>
