@@ -1,6 +1,6 @@
 // Clase que define los valores que tendra mis tareas
 export class Todo {
-  id?: number;
+  id?: string;
   title: string = '';
   complete: boolean = false;
 

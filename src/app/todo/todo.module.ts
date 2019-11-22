@@ -12,6 +12,7 @@ import { TodoInputComponent } from './todo-input/todo-input.component';
 import {FormsModule} from '@angular/forms';
 import { TodoUpdateComponent } from './todo-update/todo-update.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
+import {NgxWebstorageModule} from 'ngx-webstorage';
 
 
 @NgModule({

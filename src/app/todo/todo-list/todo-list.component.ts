@@ -1,19 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import {Todo} from '../todo';
 import {TodoListStorageService} from '../todo-list-storage.service';
+import {LocalstorageService} from '../../shared/seervices/localstorage.service';
 
 declare var $;
 
 @Component({
   selector: 'app-todo-list',
-  templateUrl: './todo-list.component.html',
-  styleUrls: ['./todo-list.component.css']
+  templateUrl: './todo-list.component.html'
 })
 export class TodoListComponent implements OnInit {
 
   todos: Todo[];
   todo: Todo = new Todo();
-  constructor(private storageTodo: TodoListStorageService) { }
+  constructor(private storageTodo: TodoListStorageService, private localSR: LocalstorageService) {
+    this.localSR.changes.subscribe(res => {
+      this.todos = res.value;
+    });
+  }
 
   ngOnInit() {
     this.todos = this.storageTodo.getTodo();
