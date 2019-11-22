@@ -22,7 +22,7 @@ export class TodoListStorageService {
   }
   // Captura todos las tareas del localstorage
   getTodo() {
-    return this.localSR.getLocalStorage();
+    return [...this.todoList];
   }
   // Agregar una nueva tarea al localstorage
   postTodo(item: Todo) {
