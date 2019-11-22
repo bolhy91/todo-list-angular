@@ -20,11 +20,11 @@ export class TodoListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.todos = this.storageTodo.getTodo();
+   this.todos = this.storageTodo.getTodo();
   }
   // Metodo para agregar una nueva tarea a la lista
   addTodo(item) {
-    this.todos =  this.storageTodo.postTodo(item);
+    this.storageTodo.postTodo(item);
   }
   // Metodo para completar una tarea de la lista
   completeTodo(item: Todo) {
@@ -32,7 +32,7 @@ export class TodoListComponent implements OnInit {
   }
   // Metodo para eliminar una tarea de la lista
   removeTodo(item: Todo) {
-    this.todos = this.storageTodo.removeTodo(item);
+    this.storageTodo.removeTodo(item);
   }
   // Abrir el modal de una tarea seleccionada por el usuario
   modalUpdate(item: Todo) {

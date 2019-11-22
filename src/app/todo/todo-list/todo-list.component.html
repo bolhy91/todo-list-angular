@@ -7,8 +7,9 @@
 <!--Lista de tareas pendientes-->
 <ul class="collection with-header">
 <!-- Recorro la lista de tareas -->
-  <li class="collection-item" *ngFor="let todo of todos">
+  <li class="collection-item" *ngFor="let todo of todos; let i=index">
     <app-todo-item
+      [id]="i"
       [item]="todo"
       (removeItem)="removeTodo($event)"
       (completeItem)="completeTodo($event)"
