@@ -15,9 +15,11 @@ export class TodoListComponent implements OnInit {
   todo: Todo = new Todo();
   constructor(private storageTodo: TodoListStorageService, private localSR: LocalstorageService) {
     this.localSR.changes.subscribe(res => {
+      
       if (res) {
         this.todos = res.value;
       }
+
       this.storageTodo.todoList = res.value;
     });
   }
