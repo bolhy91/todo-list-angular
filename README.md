@@ -1,27 +1,16 @@
-# PruebaTodoPdg
+# Todo List Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
+Aplicacion que se encarga de crear varias tareas "Por hacer". Tiene la diversas opciones:
+* Crear nueva tarea
+* Completar tarea
+* Actualizar tarea
+* Eliminar tarea
+## Instalacion
+Instalar primero los paquetes de `node_modules` corriendo en tu terminal: `npm install || yarn install`.
 
-## Development server
+Una vez instalado los paquetes abre la terminal e inserta el siguiente comando para poder correr la aplicacion `ng serve` para el servidor local. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Ve a tu navegador favorito pega la siguiente URL :`http://localhost:4200/`.
+Con esto estas listo para agregar nuevas tarea.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+_`By: bolhy91`

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Todo} from '../todo';
 import {TodoListStorageService} from '../todo-list-storage.service';
-import {LocalstorageService} from '../../shared/seervices/localstorage.service';
+import {LocalstorageService} from '../../shared/services/localstorage.service';
 
 declare var $;
 

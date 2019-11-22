@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Todo} from './todo';
 import { TodoData } from './todo-data';
-import {LocalstorageService} from '../shared/seervices/localstorage.service';
+import {LocalstorageService} from '../shared/services/localstorage.service';
 
 const storageName = 'tasks';
 
